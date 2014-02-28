@@ -1,0 +1,4 @@
+nixopolyd
+=========
+
+Nyxopoly server
