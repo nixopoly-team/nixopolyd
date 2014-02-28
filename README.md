@@ -1,4 +1,4 @@
 nixopolyd
 =========
 
-Nyxopoly server
+Nixopoly server
