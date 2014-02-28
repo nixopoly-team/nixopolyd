@@ -1,0 +1,129 @@
+This file is currently only an early stage road map. It is intended
+to be updated to reflect a markdown road map once a general
+direction is agreed upon.
+
+The contents bellow are an exact copy of the piratepad page
+
+FOR OFFLINE REFERENCE: pad: http://piratepad.net/bDpUdCWc6x
+General guidelines:
+Set your name and color, maybe write in here bellow
+:dardevelin : green
+:nekinie: pink
+:bitpuffin: blue
+:vrmac: cyan
+:WizardGed: diarrhea Brown;
+:frecel: strange red
+:slips
+********************************************************************************
+Nixopoly
+
+********************************************************************************
+Server
+Global info:
+Written in Python 3.x
+libraries:
+*
+Responsibilities:
+
+*    authentication / session (password-protected nicks?)
+*    live game state (kept in ram)
+*****NOTE: sync with client but the server is always right (modular)
+*    statistics (user scores etc, kept in a file or sqlite db)
+*    providing assets (tile images, sound files etc, can be cached on clients optionally)
+*    communication (tcp socket)
+        :vote in tcp socket;
+*    Allow reconnection of disconnected clients
+*    dump current state to [JSON?] file.
+*    configuration files (INI)
+
+Server configuration design : example, how the file structure should be
+
+Suggestion:
+
+/etc/nixopoly/
+    nixopoly.ini
+    boards/
+        myboard1/
+           description.json
+           assets/
+               tiles/
+                     *distro-logo.*
+               music/
+                    funky-ass-shit.ogg
+                    dale_chase_developers.mp3
+                    richard-stallman-death-metal.mp3
+                sfx/
+                    goto-jail.ogg
+                    your-turn.ogg
+                    read-card.mp3
+                    you-bought-property.wav
+                    player-moved-space.mp3
+
+
+********************************************************************************
+Client
+Global Info:
+Even though we are going to allow for multiple types of clients
+I think we should have our useful but also reference client
+(the one shipped by default) ---- suggestions ----
+Written in various languages
+
+Responsibilities:
+
+* Connect/authenticate with the server
+* Download the board and game rules and assets
+* Keep session up
+* Recieve and display data about actions of other players
+* Contribute to roll seed
+* order blackjack and hookers
+* be able to detect if it is already in a game and prompt the user to reconnect
+* free software song on victory
+* Do something fun after entering konami code
+
+Support Files/Documentation/Libraries
+
+C library API for server-client communication (NO ORACLE/SUN JAVA!)
+
+JS library API for extra suckyness and also server-client communication for web clients (NodeJS can bind to the C api)
+
+Basic Gameplay Outline
+==================
+
+Constant game rules:
+* Single path around the board, no "forks in the road" path options
+
+Variable game rules:
+*Number of fields
+*Prices of estates, houses and hotels
+
+
+DOGE↓ Dubstep Allan?
+
+░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░
+░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
+░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░
+░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐░░░
+░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐░░░
+░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌░░░
+░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒▌░░
+░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐░░
+░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌░
+░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌░
+▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒▐░
+▐▒▒▐▀▐▀▒░▄▄▒▄▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
+▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒▒▒░▒░▒░▒▒▐░
+░▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒░▒░▒░▒░▒▒▒▌░
+░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐░░
+░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌░░
+░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░
+░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░
+░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
+
+Random number generation:
+
+function generateRandomNumber() {
+    while(true){}
+    return 4; //chosen by a dice roll, guaranteed to be random
+    SONY style bugs :)
+    }
+
