@@ -1,0 +1,31 @@
+	Unordered List of Authors, it has to obey the following
+
+N: Real name [mandatory]
+E: email@domain.extension [mandatory]
+I: irc nickname {use (I)rc, (G)ithub, (T)witter} [optional]
+
+******************************************************************************
+
+N: Artur Frącek
+E: artur@fracek.com
+I: frecel
+
+N: Andrew DeMarsh
+E: andrew@andrewdemarsh.ca
+I: WizardGed
+
+N: David McMackins
+E: mcmackinsd@gmail.com
+I: VRMac
+
+N: Isak Andersson
+E: contact@bitpuffin.com
+I: BitPuffin
+
+N: Matt Sloper
+E: mattsloper@gmail.com
+I: slips
+
+N: Darcy Bras da Silva
+E: dardevelin@cidadecool.com
+I: dardevelin
