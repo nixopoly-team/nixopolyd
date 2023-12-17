@@ -2,18 +2,19 @@ This file is currently only an early stage road map. It is intended
 to be updated to reflect a markdown road map once a general
 direction is agreed upon.
 
-The contents bellow are an exact copy of the piratepad page
+The content below is an exact copy of the piratepad page
 
 FOR OFFLINE REFERENCE: pad: http://piratepad.net/bDpUdCWc6x
 General guidelines:
-Set your name and color, maybe write in here bellow
+Set your name and color, maybe write in here below
 :dardevelin : green
 :nekinie: pink
 :bitpuffin: blue
 :vrmac: cyan
 :WizardGed: diarrhea Brown;
 :frecel: strange red
-:slips
+:slips:
+:HeyCitizen: purple
 ********************************************************************************
 Nixopoly
 
@@ -73,7 +74,7 @@ Responsibilities:
 * Connect/authenticate with the server
 * Download the board and game rules and assets
 * Keep session up
-* Recieve and display data about actions of other players
+* Receive and display data about actions of other players
 * Contribute to roll seed
 * order blackjack and hookers
 * be able to detect if it is already in a game and prompt the user to reconnect
